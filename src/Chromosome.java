@@ -18,8 +18,11 @@ public class Chromosome implements Comparable<Chromosome>{
     }
 
     public Chromosome(int [] genes) {
+        //System.out.println("Boardsize in chromosome: " + boardSize);
         this.genes = new int[boardSize];
+        //System.out.println("Genes size: " + this.genes.length);
         for (int i = 0; i<boardSize; i++) {
+            //System.out.println(i);
             this.genes[i] = genes[i];
         }
         this.calculateFitness();

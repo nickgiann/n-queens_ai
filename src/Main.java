@@ -7,11 +7,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int boardSize = sc.nextInt();*/
         Board board = new Board(8);
+        int boardsize = board.getBoardSize();
+        System.out.println("Boardsize in main: " + boardsize);
 
         Genetic g = new Genetic();
         int minFitness = board.getMinFitness();
         System.out.println("Min fitness: " + minFitness);
-        Chromosome x = g.geneticAlgorithm(1000, 0.08, minFitness, 1000000);
+        Chromosome x = g.geneticAlgorithm(1000, 0.08, minFitness, 1000);
         x.print();
         System.out.println(x.getFitness());
     }
